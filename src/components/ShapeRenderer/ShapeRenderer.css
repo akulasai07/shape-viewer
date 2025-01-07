@@ -1,0 +1,19 @@
+.shape-renderer {
+  position: absolute;
+}
+
+.shape {
+  position: absolute;
+}
+
+.shape.rectangle {
+  border: 1px solid black;/* Adds a black border for better visibility */
+}
+
+.shape.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent; /* Creates the left diagonal side */
+  border-right: 50px solid transparent; /* Creates the right diagonal side */
+  border-bottom: 100px solid black; /* Forms the base and fills the triangle */
+}

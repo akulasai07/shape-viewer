@@ -1,0 +1,86 @@
+/* Modal container styles */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the modal on the screen */
+  background-color: #9d96b5;
+  padding: 30px;
+  border-radius: 12px; /* Smooth rounded corners for aesthetic appeal */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4); /* Adds depth to the modal */
+  z-index: 1000; /* Ensures modal appears above all other elements */
+  width: 500px; /* Defines the modal's width */
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column; /* Arranges content vertically */
+  gap: 20px; /* Spacing between input fields and elements */
+}
+
+.modalContent label {
+  display: flex;
+  flex-direction: column; /* Positions text above input fields */
+  font-size: 16px;
+  font-weight: bold;
+  color: #222222; /* Provides good contrast for text */
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end; /* Aligns buttons to the right */
+  gap: 15px; /* Adds spacing between buttons */
+}
+
+.add-button {
+  background-color: #007bff; /* Action button color */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-button:hover {
+  background-color: #0056b3; /* Slightly darker shade on hover */
+}
+
+.cancel-button {
+  background-color: #67211c; /* Red color for cancel action */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cancel-button:hover {
+  background-color: #d32f2f; /* Brighter red on hover */
+}
+
+input[type="color"] {
+  width: 50px;
+  height: 30px;
+  border: none;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+select,
+input[type="number"],
+input[type="text"] {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #231b1b;
+  border-radius: 5px;
+  margin-top: 5px;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding doesn't alter dimensions */
+}
+
+select:focus,
+input:focus {
+  outline: 2px solid #007bff; /* Adds a highlight on focus for accessibility */
+}

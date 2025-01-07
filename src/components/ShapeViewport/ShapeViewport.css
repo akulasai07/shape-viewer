@@ -1,0 +1,72 @@
+/* Container for the viewport */
+.shape-viewport {
+  flex-grow: 1;
+  background-color: #eaeaea;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px; /* Set grid square size */
+  position: relative;
+  overflow: hidden;
+  cursor: move;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  justify-content: flex-start;
+}
+
+/* Styling for rectangles and polygons */
+.shape.rectangle,
+.shape.polygon {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;/* Smooth animation for transformations */
+}
+
+/* Active/dragging state for shapes */
+.shape.rectangle:active,
+.shape.polygon:active {
+  cursor: grabbing;
+  
+}
+
+/* Triangle-specific styles */
+.shape.triangle polygon {
+  stroke: #333; /* Slightly darker stroke for better contrast */
+  cursor: grabbing;
+  stroke-width: 2;
+}
+
+/* Polygon-specific styles */
+.shape.polygon polygon {
+  stroke: #444;
+  stroke-width: 2;
+}
+
+/* Custom scrollbar styling */
+.shape-viewport::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.shape-viewport::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 4px;
+}
+
+.shape-viewport::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+.shape-viewport::-webkit-scrollbar-track {
+  background: #eaeaea;
+  border-radius: 4px;
+}
+
+/* Add animations for shapes */
+.shape polygon {
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.shape polygon:active {
+  stroke: #000; /* Darker stroke when active */
+}

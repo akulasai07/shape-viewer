@@ -1,0 +1,43 @@
+.splash-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1c182e;
+    color: white;
+    flex-direction: column;
+    animation: fadeIn 1.5s ease-in-out;/* Smooth fade-in effect */
+  }
+  
+  .splash-title {
+    font-size: 3rem;
+    margin: 0;
+    animation: slideIn 1.5s ease-in-out;/* Slide-in animation for title */
+  }
+  
+  .splash-subtitle {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    animation: fadeIn 2s ease-in-out;
+  }
+  /* Fade-in animation for the entire splash screen */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  /* Slide-in animation for the splash title */
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

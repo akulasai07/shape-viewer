@@ -1,0 +1,73 @@
+/* Left menu styling */
+.left-menu {
+  width: 200px; /* Default width for desktop */
+  background-color: #1e1e2f; /* Dark theme background */
+  border: 1px solid #333;
+  padding: 20px 15px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); /* Card effect */
+  margin: 8px;
+  max-height: calc(100vh - 30px); /* Scrollable height */
+  overflow-y: auto;
+}
+
+/* Unordered list reset */
+.left-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Button styling */
+.menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 15px;
+  background-color: #474545;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease; /* Smooth hover and active transitions */
+  box-shadow: 0px 3px 6px rgba(17, 17, 17, 0.2); /* Depth effect */
+}
+
+/* Icon adjustments for buttons */
+.menu-button i {
+  margin-right: 8px; /* Spacing between icon and text */
+  font-size: 16px;
+}
+
+/* Hover effect */
+.menu-button:hover {
+  background-color: #b5b3b3;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); /* Elevation on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+/* Active (clicked) state */
+.menu-button:active {
+  background-color: #b3a9a9;
+  transform: translateY(0);
+}
+
+/* Hidden file input styling */
+input[type="file"] {
+  display: none;
+}
+
+/* Scrollbar customization for dark mode */
+.left-menu::-webkit-scrollbar {
+  width: 6px;
+}
+.left-menu::-webkit-scrollbar-thumb {
+  background-color: #555; /* Visible thumb */
+  border-radius: 8px;
+}
+.left-menu::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
